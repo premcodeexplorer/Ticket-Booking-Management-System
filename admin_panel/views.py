@@ -30,7 +30,7 @@ class AddShowView(AdminRequiredMixin, View):
         total_seats = request.POST.get('total_seats')
         price_per_seat = request.POST.get('price_per_seat')
         
-        # Manual validation
+      
         errors = {}
         if not title:
             errors['title'] = 'Title is required'
@@ -58,7 +58,7 @@ class AddShowView(AdminRequiredMixin, View):
         if errors:
             return render(request, 'admin_panel/add_show.html', {'errors': errors, 'data': request.POST})
         
-        # Create show
+        
         show = Show.objects.create(
             title=title,
             description=description,
@@ -86,7 +86,7 @@ class EditShowView(AdminRequiredMixin, View):
         show.duration = request.POST.get('duration', show.duration)
         show.venue = request.POST.get('venue', show.venue)
         
-        # Validate numbers
+    
         errors = {}
         total_seats = request.POST.get('total_seats', show.total_seats)
         price_per_seat = request.POST.get('price_per_seat', show.price_per_seat)
