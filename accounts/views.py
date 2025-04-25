@@ -15,7 +15,7 @@ class RegisterView(View):
         password1 = request.POST.get('password1')
         password2 = request.POST.get('password2')
         
-        # Manual validation
+       
         errors = {}
         if not email:
             errors['email'] = 'Email is required'
@@ -38,7 +38,7 @@ class RegisterView(View):
             password=password1
         )
         
-        # Create profile
+      
         UserProfile.objects.create(user=user)
         
         messages.success(request, 'Registration successful. Please login.')
