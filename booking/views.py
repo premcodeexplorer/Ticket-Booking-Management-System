@@ -27,7 +27,7 @@ class BookShowView(LoginRequiredMixin, View):
         show = get_object_or_404(Show, pk=pk)
         seats = request.POST.get('seats')
         
-        # Manual validation
+       
         errors = {}
         if not seats:
             errors['seats'] = 'Number of seats is required'
@@ -44,7 +44,7 @@ class BookShowView(LoginRequiredMixin, View):
         if errors:
             return render(request, 'booking/book_show.html', {'show': show, 'errors': errors})
         
-        # Create booking
+        
         total_price = seats * show.price_per_seat
         booking = Booking.objects.create(
             user=request.user,
@@ -54,7 +54,7 @@ class BookShowView(LoginRequiredMixin, View):
             is_confirmed=True
         )
         
-        # Update available seats
+    
         show.total_seats -= seats
         show.save()
         
@@ -70,10 +70,10 @@ class BookingHistoryView(LoginRequiredMixin, ListView):
         return Booking.objects.filter(user=self.request.user).order_by('-booking_date')
     
 class AddShowView(View):
-    def get(self, request):  # Must exist to handle page loads
+    def get(self, request):  
         return render(request, 'booking/add_show.html')
     
-    def post(self, request):  # Handles form submissions
+    def post(self, request): 
         try:
             hours, minutes = map(int, request.POST['duration'].split(':'))
             Show.objects.create(
