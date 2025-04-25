@@ -1,5 +1,5 @@
-# 🎟️ Ticket Booking Management System
-## 🖼️ Screenshots  
+#  Ticket Booking Management System
+##  Screenshots  
 _Showcase your UI here with screenshots!_  
 ![Screenshot 2025-04-25 110554](https://github.com/user-attachments/assets/fafcf0f7-6a3d-4c9c-b486-c963c0339930)
 ![Screenshot 2025-04-25 110356](https://github.com/user-attachments/assets/9aeea42f-66e7-4972-9a52-d9f31879ac9f)
@@ -11,27 +11,27 @@ _Showcase your UI here with screenshots!_
 ![Screenshot 2025-04-25 110554](https://github.com/user-attachments/assets/30d780b7-f52e-4bcf-b620-4c18b3bec197)
 
 
-## 📌 Project Overview  
+##  Project Overview  
 This Ticket Booking Management System is a web application built with **Django** that allows users to browse available shows, book tickets, and view their booking history. It also features an admin panel for managing shows and users.
 
 ---
 
-## ✨ Features
+##  Features
 
-### 👤 User Features
-- 🔐 **Authentication System**: Register, login, and logout  
-- 🎭 **Show Browsing**: View list of available shows with details  
-- 🪑 **Ticket Booking**: Select and book tickets for available shows  
-- 📜 **Booking History**: View all past bookings  
+###  User Features
+-  **Authentication System**: Register, login, and logout  
+-  **Show Browsing**: View list of available shows with details  
+-  **Ticket Booking**: Select and book tickets for available shows  
+-  **Booking History**: View all past bookings  
 
-### 🛠️ Admin Features
-- 🎬 **Show Management**: Add, edit, and delete shows  
-- 📊 **Booking Overview**: View all bookings  
-- 👥 **User Management**: Manage user accounts  
+###  Admin Features
+-**Show Management**: Add, edit, and delete shows  
+-  **Booking Overview**: View all bookings  
+-  **User Management**: Manage user accounts  
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - **Backend Framework**: Django (Python)  
 - **Database**: MySQL  
 - **Containerization & CI/CD**: Docker, Jenkins (configured)
@@ -42,35 +42,35 @@ This Ticket Booking Management System is a web application built with **Django**
 
 ---
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
-### ✅ Prerequisites
+###  Prerequisites
 - Python 3.8+  
 - MySQL  
 - Git  
 
 ---
 
-## 🔧 Manual Setup 
+##  Manual Setup 
 
-### 📥 Clone the repository
+###  Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/ticket-booking.git
 cd ticket-booking
 ```
-🐍 Create and activate a virtual environment
+Create and activate a virtual environment
 bash
 Copy
 Edit
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
-📦 Install dependencies
+ Install dependencies
 bash
 Copy
 Edit
 pip install -r requirements.txt
-🗃️ Configure MySQL Database
+ Configure MySQL Database
 Create a MySQL database named ticket_booking
 
 Update config/settings.py with your database credentials:
@@ -88,51 +88,50 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-🔄 Run migrations
+ Run migrations
 bash
 Copy
 Edit
 python manage.py makemigrations
 python manage.py migrate
-🔑 Create a superuser
+ Create a superuser
 bash
 Copy
 Edit
 python manage.py createsuperuser
 Follow the prompts to create your admin user.
 
-🖥️ Run the development server
+ Run the development server
 bash
 Copy
 Edit
 python manage.py runserver
-🌐 Access the application
+ Access the application
 Main App: http://localhost:8000
 
 Admin Panel: http://localhost:8000/admin/dashboard/
 
-👨‍💼 User Guide
+ User Guide
 For Regular Users
-📝 Registration: Sign up with email and password
+ Registration: Sign up with email and password
 
-🎭 Browse Shows: View available shows
+ Browse Shows: View available shows
 
-🔍 Show Details: Click to explore more
+ Show Details: Click to explore more
 
-🎟️ Book Tickets: Select number of seats and confirm
-
-📜 View Bookings: Check your booking history
+ Book Tickets: Select number of seats and confirm
+View Bookings: Check your booking history
 
 For Administrators
-🔐 Admin Access: Login via admin credentials
+ Admin Access: Login via admin credentials
 
-🎬 Manage Shows: Add, edit, delete show details
+ Manage Shows: Add, edit, delete show details
 
-📊 View All Bookings: Monitor system-wide ticket bookings
+ View All Bookings: Monitor system-wide ticket bookings
 
-👥 User Management: Control user accounts
+ User Management: Control user accounts
 
-🗂️ Project Structure
+ Project Structure
 bash
 Copy
 Edit
